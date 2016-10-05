@@ -240,7 +240,14 @@ ul.navbar-nav>li:last-child {
   width: 100%;
   height: 200px;
 }
-
+a.school-calendar {
+  color: rgba(249, 248, 244, .9);
+  font-style: italic;
+  cursor: pointer;
+}
+a.school-calendar:hover {
+  color: rgba(249, 248, 244, .6);
+}
 
 /*End Where and When*/
 
@@ -261,6 +268,7 @@ a.email {
   font-style: italic;
   text-align: center;
   margin: auto;
+  cursor: pointer;
 }
 a.email:hover {
   color: rgba(249, 248, 244, .6);
@@ -332,32 +340,77 @@ small.copy-right {
   /*Arranging Jumbotron*/
   @media only screen and (min-width: 550px) {
     .btn.btn-blue.btn-block {font-size: 25px; padding: 3px 40px;}
-    .football-girl {width:90%; margin-top: -20%; margin-right: -20%;}
+    .football-girl {width:85%; margin-top: 5%; margin-right: -19%;}
     .heading {margin-top: -48%;}
     .heading h1 {font-size: 45px;}
     .heading h2 {font-size: 43px;}
+    .triangle-btns {width: 12%}
   }
   @media only screen and (min-width: 650px) {
     .btn.btn-blue.btn-block {font-size: 25px; padding: 3px 40px;}
-    .football-girl {width:75%; margin-top: -20%; margin-right: -17%;}
+    .football-girl {width:77%; margin-top: 5%; margin-right: -17%;}
     .heading {margin-top: -38%; margin-left: 23%;}
     .heading h1 {font-size: 45px;}
     .heading h2 {font-size: 43px;}
+    .triangle-btns {width: 10%}
+    .about img.icon, .quote img.icon, .contact img.icon {width: 15%;}
+    .join img.icon, .bring img.icon {width: 25%;}
+    input {margin-bottom: 20px;}
+    textarea {margin-bottom: 20px;}
+    input.form-control {width: 70%; margin-left: 15%;}
+
 
   /*Small Devices, Tablets*/
   @media only screen and (min-width: 768px) {
     .btn.btn-blue.btn-block {font-size: 28px; padding: 3px 40px;}
-    .football-girl {width:70%; margin-top: -33%; margin-right: -15%;}
+    .football-girl {width:70%; margin-top: -15%; margin-right: -10%;}
     .heading {margin-top: -35%; margin-left: 25%;}
     .heading h1 {font-size: 50px;}
     .heading h2 {font-size: 48px;}
+    .btn {font-size: 25px;}
   }
 
+  /*Arranging Jumbotron*/
+  @media only screen and (min-width: 850px) {
+    .btn.btn-blue.btn-block {font-size: 28px; padding: 3px 60px;}
+    .football-girl {width:70%; margin-top: -15%; margin-right: -16%;}
+    .heading {margin-top: -34%; margin-left: 17%;}
+    .heading h1 {font-size: 55px;}
+    .heading h2 {font-size: 53px;}
+    .triangle-btns {width: 8%}
+    .about img.icon, .quote img.icon, .contact img.icon {width: 12%;}
+    .join img.icon, .bring img.icon {width: 20%;}
+    input {margin-bottom: 20px;}
+    textarea {margin-bottom: 20px;}
+    input.form-control {width: 60%; margin-left: 20%;}
+    textarea.form-control {width: 80%; margin-left: 10%;}
+
+  }
 
   /*Medium Devices, Laptops*/
   @media only screen and (min-width: 992px) {
-
+    body {font-size: 25px;}
+    .logo {width: 20%;}
+    .btn.btn-blue.btn-block {font-size: 33px; padding: 3px 70px;}
+    .football-girl {width:60%; margin-top: -12%; margin-right: -13%;}
+    .heading {margin-top: -32%; margin-left: 25%;}
+    .heading h1 {font-size: 65px;}
+    .heading h2 {font-size: 63px;}
+    .btn {font-size: 28px;}
+    .about img.icon, .quote img.icon, .contact img.icon {width: 10%;}
+    .join img.icon, .bring img.icon {width: 16%;}
+    .about p, .join p, .info p, .bring p, .contact p, .quote p {margin-left: 20%; margin-right: 20%;}
+    .info h4 {font-size: 25px;}
+    .info p, .contact p {font-size: 22px;}
+    input {margin-bottom: 20px;}
+    textarea {margin-bottom: 20px;}
+    input.form-control {width: 40%; margin-left: 30%;}
+    textarea.form-control {width: 60%; margin-left: 20%;}
+    .contact .send {font-size: 23px; margin-bottom: 20px;}
+    h1.quote-text {font-size: 55px;}
+    h2.wednesday-text {font-size: 43px; margin-bottom: 150px;}
   }
+
 
   /*Large Devices, Desktops*/
   @media only screen and (min-width: 1200px) {
