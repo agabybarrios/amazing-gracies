@@ -9,8 +9,6 @@ body {
   position: relative;
 }
 
-
-
 h1, h2, h4{
   font-family: 'Lato', sans-serif;
 }
@@ -294,6 +292,11 @@ textarea {
 .btn-default {
   font-size: 15px;
   padding: 0 20px;
+}
+
+.alert {
+  padding: 5px;
+  font-size: 15px;
 }
 
 /*End Any Questions?*/
