@@ -11,19 +11,19 @@
 		$body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
 		// Check if name has been entered
-		/* if (!$_POST['name']) {
+		if (!$_POST['name']) {
 			$errName = 'Please enter your name';
-		} */
+		}
 
 		// Check if email has been entered and is valid
-		/* if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 			$errEmail = 'Please enter a valid email address';
-		} */
+		}
 
 		//Check if message has been entered
-		/* if (!$_POST['message']) {
+		if (!$_POST['message']) {
 			$errMessage = 'Please enter your message';
-		} */
+		}
 		/*Check if simple anti-bot test is correct
 		if ($human !== 5) {
 			$errHuman = 'Your anti-spam is incorrect';
@@ -205,15 +205,18 @@ if (!$errName && !$errEmail && !$errMessage /*&& !$errHuman*/) {
 
             <div class="form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Name" required value="<?php echo htmlspecialchars($_POST['name']); ?>"/>
-            </div>
+							<?php echo "<p class='text-danger'>$errName</p>";?>
+						</div>
 
             <div class="form-group">
               <input type="email" name="email" class="form-control" id="email" placeholder="Email" required value="<?php echo htmlspecialchars($_POST['email']); ?>"/>
-            </div>
+							<?php echo "<p class='text-danger'>$errEmail</p>";?>
+						</div>
 
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" id="message" required placeholder="Your message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-            </div>
+							<?php echo "<p class='text-danger'>$errMessage</p>";?>
+						</div>
 
             <div class="form-group">
               <input type="submit" name="submit" class="btn btn-default send" value="Send"/>

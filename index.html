@@ -158,11 +158,11 @@
           <p>
             Get in touch via <a class="email" href="#">amazinggraciesfc@hotmail.com</a>, or by filling the contact form below.
           </p>
-          <form class="text-center">
-            <input type="text" class="form-control" id="name" placeholder="Name">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-            <textarea class="form-control" rows="5" id="message" placeholder="Your message"></textarea>
-            <button type="submit" class="btn btn-default send">Send</button>
+          <form action="form.php" method="post" role="form" class="text-center">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name" value=""/>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" value=""/>
+            <textarea class="form-control" name="message" rows="5" id="message" placeholder="Your message"></textarea>
+            <input type="submit" name="submit" class="btn btn-default send" value="Send"/>
           </form>
 
           <div class="button">
