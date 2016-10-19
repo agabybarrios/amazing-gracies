@@ -2,6 +2,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 23px;
+}
+
+.site-wraper {
   overflow-x: hidden;
 }
 
@@ -370,6 +373,7 @@ small.copy-right {
     .btn {font-size: 25px;}
   }
 
+
   /*Arranging Jumbotron*/
   @media only screen and (min-width: 850px) {
     .btn.btn-blue.btn-block {font-size: 28px; padding: 3px 60px;}
@@ -384,8 +388,8 @@ small.copy-right {
     textarea {margin-bottom: 20px;}
     input.form-control {width: 60%; margin-left: 20%;}
     textarea.form-control {width: 80%; margin-left: 10%;}
-
   }
+
 
   /*Medium Devices, Laptops*/
   @media only screen and (min-width: 992px) {
@@ -414,5 +418,23 @@ small.copy-right {
 
   /*Large Devices, Desktops*/
   @media only screen and (min-width: 1200px) {
+    .btn.btn-blue.btn-block {font-size: 33px; padding: 3px 95px;}
+    .football-girl {width:50%; margin-top: -10%; margin-right: -6%;}
+    .heading {margin-top: -30%; margin-left: 30%;}
+    .heading h1 {font-size: 72px;}
+    .heading h2 {font-size: 72px;}
+  }
 
+  /*Arranging Jumbotron*/
+  @media only screen and (min-width: 1300px) {
+    .football-girl {width:55%; margin-top: -10%; margin-right: -16%;}
+    .heading {margin-top: -27%; margin-left: 31%;}
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .btn.btn-blue.btn-block {font-size: 33px; padding: 3px 117px;}
+    .football-girl {width:60%; margin-top: -10%; margin-right: -27%;}
+    .heading {margin-top: -25%; margin-left: 30%;}
+    .heading h1 {font-size: 80px;}
+    .heading h2 {font-size: 80px;}
   }
