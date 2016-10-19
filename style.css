@@ -6,7 +6,10 @@ body {
 
 .site-wraper {
   overflow-x: hidden;
+  position: relative;
 }
+
+
 
 h1, h2, h4{
   font-family: 'Lato', sans-serif;
