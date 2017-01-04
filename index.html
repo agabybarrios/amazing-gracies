@@ -42,7 +42,7 @@
                   <li><a href="#can-i-join">Can I join?</a></li>
                   <li><a href="#where-and-when">Where and when</a></li>
                   <li><a href="#what-to-bring">What to bring</a></li>
-                  <li><a href="#any-questions">Any questions</a></li>
+                  <li><a href="#any-questions">Any questions?</a></li>
                 </ul>
               </div>
             </div>
@@ -156,7 +156,7 @@
         <div class="container-fluid">
           <img src="img/envelope.png" class="icon img-responsive center-block" alt="envelope icon" />
           <p>
-            Get in touch via <a class="email" href="#">amazinggraciesfc@hotmail.com</a>, or by filling the contact form below.
+            Get in touch via <span>amazinggraciesfc@hotmail.com</span>, or by filling the contact form below.
           </p>
           <form action="form.php" method="post" role="form" class="text-center">
             <input type="text" name="name" class="form-control" id="name" placeholder="Name" value=""/>
@@ -196,18 +196,21 @@
       <script src="js/bootstrap.min.js"></script>
       <!--Google Maps JS script-->
       <script>
-        function myMap() {
-          var myCenter = new google.maps.LatLng(55.961105, -3.189693);
-          var mapCanvas = document.getElementById("map");
-          var mapOptions = {
-            center: myCenter, zoom: 15
-          };
-          var map = new google.maps.Map(mapCanvas, mapOptions);
-          var marker = new google.maps.Marker({position: myCenter});
-          marker.setMap(map);
+         function initMap() {
+         var uluru = {lat: 55.961105, lng: -3.189693};
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 15,
+           center: uluru
+         });
+         var marker = new google.maps.Marker({
+           position: uluru,
+           map: map
+         });
         }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnt7GzF6HIebQdwrwoM_zZ0M2PZDftlXc&callback=initMap">
+      </script>
     </div>
   </body>
 </html>

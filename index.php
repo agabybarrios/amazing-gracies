@@ -5,7 +5,7 @@
 		$message = $_POST['message'];
 		/* $human = intval($_POST['human']); */
 		$from = 'Amazing Gracies Contact Form';
-		$to = 'agabybarrios@gmail.com';
+		$to = 'Amazinggraciesfc@hotmail.com';
 		$subject = 'Message from Contact Web Form ';
 
 		$body = "From: $name\n E-Mail: $email\n Message:\n $message";
@@ -32,7 +32,7 @@
 // If there are no errors, send the email
 if (!$errName && !$errEmail && !$errMessage /*&& !$errHuman*/) {
 	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! We will be in touch</div>';
+		$result='<div class="alert alert-success">Thank You! We&#8217;ll be in touch</div>';
 	} else {
 		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
 	}
@@ -85,7 +85,7 @@ if (!$errName && !$errEmail && !$errMessage /*&& !$errHuman*/) {
                   <li><a href="#can-i-join">Can I join?</a></li>
                   <li><a href="#where-and-when">Where and when</a></li>
                   <li><a href="#what-to-bring">What to bring</a></li>
-                  <li><a href="#any-questions">Any questions</a></li>
+                  <li><a href="#any-questions">Any questions?</a></li>
                 </ul>
               </div>
             </div>
@@ -199,7 +199,7 @@ if (!$errName && !$errEmail && !$errMessage /*&& !$errHuman*/) {
         <div class="container-fluid">
           <img src="img/envelope.png" class="icon img-responsive center-block" alt="envelope icon" />
           <p>
-            Get in touch via <a class="email" href="#">amazinggraciesfc@hotmail.com</a>, or by filling the contact form below.
+            Get in touch via <span>amazinggraciesfc@hotmail.com</span>, or by filling the contact form below.
           </p>
           <form action="#any-questions" method="post" role="form" class="text-center">
 
@@ -259,18 +259,21 @@ if (!$errName && !$errEmail && !$errMessage /*&& !$errHuman*/) {
       <script src="js/bootstrap.min.js"></script>
       <!--Google Maps JS script-->
       <script>
-        function myMap() {
-          var myCenter = new google.maps.LatLng(55.961105, -3.189693);
-          var mapCanvas = document.getElementById("map");
-          var mapOptions = {
-            center: myCenter, zoom: 15
-          };
-          var map = new google.maps.Map(mapCanvas, mapOptions);
-          var marker = new google.maps.Marker({position: myCenter});
-          marker.setMap(map);
-        }
-      </script>
-      <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+					function initMap() {
+					var uluru = {lat: 55.961105, lng: -3.189693};
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 15,
+						center: uluru
+					});
+					var marker = new google.maps.Marker({
+						position: uluru,
+						map: map
+					});
+				 }
+			</script>
+			<script async defer
+			 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnt7GzF6HIebQdwrwoM_zZ0M2PZDftlXc&callback=initMap">
+			</script>
     </div>
   </body>
 </html>
